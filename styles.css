@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(38, 73, 119);
+    color: rgb(203, 213, 245);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: #72cbff;
+  text-decoration: none;
+  transition: all 1s ease; /* Efeito de transição suave */
+}
+a:visited {
+  color: #72cbff; /* Cor laranja para links visitados */
+}
+a:hover {
+  color: #e988ff; /* Cor rosa ao passar o mouse */
+}
+a:active {
+  color: #27cc4d; /* Cor verde quando clicado */
+}
+
+
