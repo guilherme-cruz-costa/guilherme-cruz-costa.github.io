@@ -4,6 +4,21 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+h1 {
+  color: #feffff;
+}
+
+img#asti_no_mapa {
+  width: 500px;
+}
+
+img#img_emblematica {
+  gap: 10px;
+  border-radius: 10px;
+  width: 120px;
+  height: 80px;
+}
+
 a {
   color: #72cbff;
   text-decoration: none;
@@ -18,7 +33,5 @@ a:hover {
 a:active {
   color: #27cc4d; /* Cor verde quando clicado */
 }
-
-img#pag_inicial { width: 300px}
 
 
