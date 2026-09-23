@@ -1,52 +1,106 @@
 <link rel="stylesheet" href="styles.css" />
 <header>
-  <h1>A minha cidade</h1>
+  <h1 id="headere">A minha cidade</h1>
   <nav>
-    <a href="index.html"> Sobre</a>
-    <a href="local.html"> Localizador</a>
-    <a href="multimedia.html"> Multimédia</a>
+    <a href="sobre.html"> Sobre</a>
+    <a href="local.html"> Localização</a>
+    <a id="selecionada" href="multimedia.html"> Multimédia</a>
     <a href="info.html"> Informação</a>
   </nav>
 </header>
 
-<body>
-  <h2>Multimedia</h2>
-  <p>Aqui encontra as fotos mais emblemáticas de Asti!</p>
-  <h3>Fotografias</h3>
-  <img
-    id="img_emblematica"
-    src="images/imagens_emblematicas/1.jpeg"
-    alt="Vista Panoramica"
-  />
-  <img
-    id="img_emblematica"
-    src="images/imagens_emblematicas/2.jpg"
-    alt="Torre Catedral"
-  />
-  <img
-    id="img_emblematica"
-    src="images/imagens_emblematicas/3.jpg"
-    alt="Pilar Centro"
-  />
-  <img
-    id="img_emblematica"
-    src="images/imagens_emblematicas/4.jpg"
-    alt="Praça Central 1"
-  />
-  <img
-    id="img_emblematica"
-    src="images/imagens_emblematicas/5.jpg"
-    alt="Praça Central 2"
-  />
-  <img id="img_emblematica" src="images/imagens_emblematicas/6.jpg" alt="Rua" />
-  <img
-    id="img_emblematica"
-    src="images/imagens_emblematicas/7.jpg"
-    alt="Catedral vista de frente"
-  />
-  <img
-    id="img_emblematica"
-    src="images/imagens_emblematicas/8.jpg"
-    alt="Catedral de lado"
-  />
-</body>
+<main>
+  <p id="superior_menu">
+    Nesta página encontra conteúdos multimédia, tais como:
+  </p>
+
+  <!-- Links de Âncora -->
+  <p>
+    <a href="#fotografias">Fotografias</a> | <a href="#video">Vídeo</a> |
+    <a href="#poema">Poema</a>
+  </p>
+
+  <section>
+    <!-- Mudei o ID aqui -->
+    <h3 id="fotografias">Fotografias</h3>
+    <p>Aqui encontra as fotos mais emblemáticas de Asti!</p>
+
+    <div class="fotografias">
+      <img
+        id="img_emblematica"
+        src="images/imagens_emblematicas/1.jpeg"
+        alt="Vista Panoramica"
+      />
+      <img
+        id="img_emblematica"
+        src="images/imagens_emblematicas/2.jpg"
+        alt="Torre Catedral"
+      />
+      <img
+        id="img_emblematica"
+        src="images/imagens_emblematicas/3.jpg"
+        alt="Pilar Centro"
+      />
+      <img
+        id="img_emblematica"
+        src="images/imagens_emblematicas/4.jpg"
+        alt="Praça Central 1"
+      />
+      <img
+        id="img_emblematica"
+        src="images/imagens_emblematicas/5.jpg"
+        alt="Praça Central 2"
+      />
+      <img
+        id="img_emblematica"
+        src="images/imagens_emblematicas/6.jpg"
+        alt="Rua"
+      />
+      <img
+        id="img_emblematica"
+        src="images/imagens_emblematicas/7.jpg"
+        alt="Catedral vista de frente"
+      />
+      <img
+        id="img_emblematica"
+        src="images/imagens_emblematicas/8.jpg"
+        alt="Catedral de lado"
+      />
+    </div>
+  </section>
+
+  <section>
+    <!-- Mudei o ID aqui -->
+    <h3 id="video">Vídeo</h3>
+    <p>Veja estas imagens de Asti.</p>
+
+    <iframe
+      id="video_cidade"
+      src="https://www.youtube.com/embed/R8ntCWLA65k?si=Ylsstqc1fHtXUIyA&amp;start=95"
+      title="YouTube video player"
+      frameborder="0"
+      allow="
+        accelerometer;
+        autoplay;
+        clipboard-write;
+        encrypted-media;
+        gyroscope;
+        picture-in-picture;
+        web-share;
+      "
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </section>
+
+  <section>
+    <!-- Mudei o ID aqui -->
+    <h3 id="poema">Poesia</h3>
+    <div class="poema-container">
+      <p>Asti, berço de torres antigas,</p>
+      <p>Com vinhos doces que encantam o olhar,</p>
+      <p>As tuas praças guardam cantigas,</p>
+      <p>De uma história que o tempo não vai apagar.</p>
+    </div>
+  </section>
+</main>

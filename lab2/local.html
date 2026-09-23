@@ -1,20 +1,28 @@
 <link rel="stylesheet" href="styles.css" />
 <header>
-  <h1>A minha cidade</h1>
+  <h1 id="headere">A minha cidade</h1>
   <nav>
-    <a href="index.html"> Sobre</a>
-    <a href="local.html"> Localizador</a>
+    <a href="sobre.html"> Sobre</a>
+    <a id="selecionada" href="local.html"> Localização</a>
     <a href="multimedia.html"> Multimédia</a>
     <a href="info.html"> Informação</a>
   </nav>
 </header>
 
-<body>
-  <h2>Localização</h2>
-  <p>
+<main>
+  <p id="sobre_localizacao">
     A cidade de Asti fica localizada no noroeste de Itália, na região do
     Piemonte. É a capital da província homónima de Asti e situa-se na planície
     do rio Tanaro, a cerca de 55 quilómetros a este de Turim.
   </p>
-  <img id="asti_no_mapa" src="images/asti no mappa.png" alt="Asti no mapa" />
-</body>
+  <iframe
+    id="asti_no_mapa"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45220.771615164034!2d8.168167553555188!3d44.89692864548157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4787933cd27f8277%3A0xe7347bb67fb9d561!2s14100%20Asti%2C%20It%C3%A1lia!5e0!3m2!1spt-PT!2spt!4v1790175449951!5m2!1spt-PT!2spt"
+    width="400"
+    height="300"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+  ></iframe>
+</main>

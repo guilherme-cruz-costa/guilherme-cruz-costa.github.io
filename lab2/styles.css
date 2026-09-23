@@ -1,11 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 body {
-    background-color: rgb(38, 73, 119);
-    color: rgb(203, 213, 245);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b1524;
+  color: rgb(203, 213, 245);
+  font-family: 'Inter';
+  margin: 0;
+}
+
+header {
+  background-color: #12233a;
+  padding: 20px;
+  text-align: center;
 }
 
 h1 {
   color: #feffff;
+  margin: 0;
+}
+
+nav {
+  background-color: #1a3457;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+}
+
+main {
+  background-color: rgb(38, 73, 119);
+  margin: 30px 50px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #12233a;
+  color: rgb(203, 213, 245);
+  padding: 20px;
+  text-align: center;
+}
+
+a {
+  color: #72cbff;
+  text-decoration: none;
+  transition: all 1s ease;
+}
+
+a:visited {
+  color: #72cbff;
+}
+
+a:hover {
+  color: #e988ff;
+}
+
+a:active {
+  color: #27cc4d;
+}
+
+a#selecionada {
+  color: rgb(255, 150, 243);
+  font-weight: bold;
+}
+
+.fotografias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fotografias img {
+  width: 150px;
+  border-radius: 20px;
+}
+
+h1#headere{
+  margin-bottom: 15px;
+}
+
+h3#menu_fotografias {
+  margin-bottom: -10px;
+  margin-top: 0px;
+}
+
+h3#menu_video {
+  margin-bottom: -10px;
+  margin-top: 15px;
+}
+
+p#superior_menu {
+  margin-bottom: -10px;
 }
 
 img#asti_no_mapa {
@@ -19,19 +106,51 @@ img#img_emblematica {
   height: 80px;
 }
 
-a {
-  color: #72cbff;
-  text-decoration: none;
-  transition: all 1s ease; /* Efeito de transição suave */
-}
-a:visited {
-  color: #72cbff; /* Cor laranja para links visitados */
-}
-a:hover {
-  color: #e988ff; /* Cor rosa ao passar o mouse */
-}
-a:active {
-  color: #27cc4d; /* Cor verde quando clicado */
+.tabela-cidade {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
+.tabela-cidade th, .tabela-cidade td {
+  border: 2px solid #1a3457;
+  padding: 12px;
+  text-align: center;
+}
 
+.tabela-cidade th {
+  background-color: #0b1524;
+  color: #feffff;
+}
+
+.tabela-cidade td {
+  background-color: #1a3457;
+  color: rgb(203, 213, 245);
+}
+
+p#sobre_localizacao{
+  margin: 15px;
+}
+
+iframe#asti_no_mapa {
+  display: block;
+  margin: 0 auto;
+}
+
+.poema-container p:nth-child(odd) {
+  color: #feffff;
+  font-weight: bold;
+}
+
+.poema-container p:nth-child(even) {
+  color: #e988ff;
+  font-style: italic;
+  margin-left: 20px;
+}
+
+iframe#video_cidade {
+  width: 100%; /* Ocupa a largura toda da secção/main */
+  aspect-ratio: 16 / 9; /* Mantém o formato padrão do YouTube sem espalmar a imagem */
+  border-radius: 10px; /* Coloquei os cantos arredondados para combinar com as tuas fotos! */
+}
