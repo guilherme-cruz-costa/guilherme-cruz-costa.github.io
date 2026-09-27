@@ -1,148 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  /* Fontes semelhantes ao ecossistema Apple, mantendo Inter como fallback */
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'Inter', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  background-color: #0b1524;
-  color: rgb(203, 213, 245);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
+  /* Fundo muito escuro e texto branco retirados da imagem[cite: 3] */
+  background-color: #101722;
+  color: #ffffff;
 }
 
+/* Header com efeito de vidro opaco comum na Apple, utilizando o azul da barra superior[cite: 3] */
 header {
-  background-color: #12233a;
-  padding: 20px;
-  text-align: center;
+  background: rgba(28, 54, 89, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  position: sticky;
+  height: 8vh;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-h1 {
-  color: #feffff;
-  margin: 0;
-}
-
-nav {
-  background-color: #1a3457;
-  padding: 15px;
-  text-align: center;
+nav ul {
+  list-style: none; /* Remove os bullets[cite: 2] */
+  display: flex;
+  gap: 2.5rem;
 }
 
 nav a {
-  margin: 0 15px;
+  text-decoration: none; /* Remove o sublinhado dos links[cite: 2] */
+  color: #5eb0e5; /* Azul claro dos links da imagem[cite: 3] */
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-main {
-  background-color: rgb(38, 73, 119);
-  margin: 30px 50px;
-  padding: 20px;
-  border-radius: 10px;
+nav a:hover {
+  color: #f48fb1; /* Rosa do link "Informação" na imagem[cite: 3] */
 }
 
-footer {
-  background-color: #12233a;
-  color: rgb(203, 213, 245);
-  padding: 20px;
+/* Secção 1: Hero Image */
+main > section:nth-child(1) {
+  height: 100vh; /* Requisito do guião[cite: 2] */
+  background-size: cover;
+  background-position: center;
+  /* Gradiente escuro para que o texto branco se leia perfeitamente sobre a imagem */
+  background-image: linear-gradient(rgba(16, 23, 34, 0.4), rgba(16, 23, 34, 0.4)), url('images/astiEditado.jpg');
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-a {
-  color: #72cbff;
+main > section:nth-child(1) > p:nth-child(1) {
+  font-weight: 700;
+  font-size: 64px;
+  letter-spacing: -0.015em;
+}
+
+main > section:nth-child(1) > p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+/* Estilização do Botão (utilizando nth-of-type em vez da classe .botao) */
+main > section:nth-child(1) > a:nth-of-type(1) {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 28px;
+  background-color: #2c5282; /* Azul do contentor central da imagem[cite: 3] */
+  color: #ffffff;
+  border-radius: 980px; /* Arredondado estilo pílula */
+  font-weight: 500;
   text-decoration: none;
-  transition: all 1s ease;
+  font-size: 17px;
+  /* transition removida conforme a tua versão anterior */
 }
 
-a:visited {
-  color: #72cbff;
+main > section:nth-child(1) > a:nth-of-type(1):hover {
+  background-color: #3b6b9e; /* Ligeiro clareamento ao passar o rato */
 }
 
-a:hover {
-  color: #e988ff;
-}
-
-a:active {
-  color: #27cc4d;
-}
-
-a#selecionada {
-  color: rgb(255, 150, 243);
-  font-weight: bold;
-}
-
-.fotografias {
+/* Secção 2: Projetos organizados em layout Flex[cite: 2] */
+main > section:nth-child(2) {
+  background-color: #101722; /* Fundo escuro contínuo[cite: 3] */
+  padding: 100px 40px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 24px;
+  min-height: 100vh; /* Requisito do guião[cite: 2] */
 }
 
-.fotografias img {
-  width: 150px;
-  border-radius: 20px;
+main > section:nth-child(2) > h1 {
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: -0.01em;
 }
 
-h1#headere{
-  margin-bottom: 15px;
+main > section:nth-child(2) > p:nth-of-type(1) {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #e2e8f0; /* Texto ligeiramente mais escuro que o branco puro */
+  opacity: 0.9;
+  font-size: 18px;
 }
 
-h3#menu_fotografias {
-  margin-bottom: -10px;
-  margin-top: 0px;
+/* Cards sem divs e sem efeitos de hover (removidos como no teu código) */
+main > section:nth-child(2) > article {
+  background-color: #2c5282; /* Azul do bloco "Informações"[cite: 3] */
+  color: #ffffff;
+  width: 320px;
+  padding: 40px 30px;
+  border-radius: 18px;
+  text-align: center;
 }
 
-h3#menu_video {
-  margin-bottom: -10px;
+main > section:nth-child(2) > article > h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+main > section:nth-child(2) > article > p {
+  color: #e2e8f0;
+}
+
+/* A tua nova adição: formatação do link dentro do card */
+main > section:nth-child(2) > article > a {
+  text-decoration: none;
+  color: #f48fb1; /* Rosa da imagem para o link ganhar destaque no card azul[cite: 3] */
+  font-weight: 600;
+  display: inline-block;
   margin-top: 15px;
 }
 
-p#superior_menu {
-  margin-bottom: -10px;
+/* Secção 3: Disciplina lado a lado em ecrãs grandes */
+main > section:nth-child(3) {
+  height: 100vh; /* Requisito do guião[cite: 2] */
+  background-color: rgb(221, 215, 193); /* Fundo escuro contínuo[cite: 3] */
+  display: flex;
+  color: #273a5a;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  gap: 60px;
 }
 
-img#asti_no_mapa {
-  width: 500px;
+main > section:nth-child(3) > article {
+  max-width: 450px;
 }
 
-img#img_emblematica {
-  gap: 10px;
-  border-radius: 10px;
-  width: 120px;
-  height: 80px;
+main > section:nth-child(3) > article > h1 {
+  font-size: 40px;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
 }
 
-.tabela-cidade {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  margin-bottom: 30px;
+main > section:nth-child(3) > article > p {
+  font-size: 18px;
+  color: #101722;
+  line-height: 1.5;
 }
 
-.tabela-cidade th, .tabela-cidade td {
-  border: 2px solid #1a3457;
-  padding: 12px;
-  text-align: center;
+main > section:nth-child(3) > figure > img {
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
 }
 
-.tabela-cidade th {
-  background-color: #0b1524;
-  color: #feffff;
+/* Media query: empilha conteúdo da secção 3 se estiver no telemóvel[cite: 2] */
+@media (max-width: 768px) {
+  main > section:nth-child(3) {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    min-height: 100vh;
+  }
 }
 
-.tabela-cidade td {
-  background-color: #1a3457;
-  color: rgb(203, 213, 245);
-}
-
-p#sobre_localizacao{
-  margin: 15px;
-}
-
-iframe#asti_no_mapa {
-  display: block;
-  margin: 0 auto;
-}
-
-.poema-container p:nth-child(odd) {
-  color: #feffff;
-  font-weight: bold;
-}
-
-.poema-container p:nth-child(even) {
-  color: #e988ff;
-  font-style: italic;
-  margin-left: 20px;
+footer {
+  height: 10vh;
+  background: #080c12; /* Um tom ligeiramente mais escuro que o fundo para separar o rodapé */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
