@@ -1,20 +1,85 @@
-<link rel="stylesheet" href="styles.css" />
-<header>
-  <h1 id="headere">A minha cidade</h1>
-  <nav>
-    <a href="/index.html"> Home</a>
-    <a id="selecionada" href="sobre.html"> Sobre</a>
-    <a href="local.html"> Localização</a>
-    <a href="multimedia.html"> Multimédia</a>
-    <a href="info.html"> Informação</a>
-  </nav>
-</header>
-<main>
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre - Asti</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
-    <article>
-      Asti é uma comuna italiana da região do Piemonte, província de Asti, com
-      cerca de 70.598 habitantes. Estende-se por uma área de 151 km², tendo uma
-      densidade populacional de 468 hab/km².
-    </article>
+    <header>
+      <h1 id="headere">A minha cidade</h1>
+      <nav>
+        <a href="index.html"> Home</a>
+        <a id="selecionada" href="sobre.html"> Sobre</a>
+        <a href="local.html"> Localização</a>
+        <a href="multimedia.html"> Multimédia</a>
+        <a href="info.html"> Informação</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 1. Efeito Parallax -->
+      <section class="parallax-section">
+        <div class="parallax-content">
+          <h2>Descobre Asti</h2>
+          <p>O coração histórico do Piemonte</p>
+        </div>
+      </section>
+
+      <!-- 2. Informação Intercalada (O teu texto original + extras) -->
+      <section class="info-section">
+        <article>
+          <h3>Uma Herança Medieval</h3>
+          <p>
+            Asti é uma comuna italiana da região do Piemonte, província de Asti,
+            com cerca de 70.598 habitantes. Estende-se por uma área de 151 km²,
+            tendo uma densidade populacional de 468 hab/km².
+          </p>
+          <p>
+            Historicamente conhecida como a "Cidade das 100 Torres", Asti
+            preserva um dos mais ricos patrimónios medievais de Itália, com
+            palácios imponentes e ruas que contam séculos de história em cada
+            esquina.
+          </p>
+        </article>
+      </section>
+
+      <!-- 3. Vídeo Background -->
+      <section class="video-section">
+        <video autoplay loop muted playsinline class="video-bg">
+          <!-- Vídeo de exemplo do Pixabay relacionado com paisagens italianas/vinhas -->
+          <source
+            src="video/Asti Italy Walking Tour_ Local Life & Shopping Paradise in 4K - YouTube e mais 8 páginas - gui - Microsoft_ Edge 2026-09-28 14-15-13_compressed.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-overlay">
+          <h2>Tradição e Cultura</h2>
+          <p>
+            A terra do célebre Palio di Asti e do mundialmente famoso vinho
+            espumante.
+          </p>
+        </div>
+      </section>
+
+      <!-- 4. Mais Informação Intercalada -->
+      <section class="info-section alternada">
+        <article>
+          <h3>O Palio di Asti</h3>
+          <p>
+            Todos os anos, no mês de setembro, a cidade ganha vida com o Palio
+            di Asti, a mais antiga corrida de cavalos de Itália. Esta tradição
+            milenar transforma as praças num espetáculo vibrante de cores,
+            bandeiras e uma intensa rivalidade histórica entre os diferentes
+            bairros da cidade.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Guilherme Costa. Todos os direitos reservados.</p>
+    </footer>
   </body>
-</main>
+</html>
