@@ -451,14 +451,8 @@ footer {
   }
 }
 
-/* =========================================
-   NOVOS EFEITOS (PARALLAX E VÍDEO BACKGROUND)
-   ========================================= */
-
-/* Efeito Parallax */
 .parallax-section {
-  /* Imagem de exemplo do Pixabay. Podes trocar pelo link de outra imagem */
-  background-image: url('https://cdn.pixabay.com/photo/2020/06/15/15/16/asti-5302256_1280.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.2)),url('images/imagens_emblematicas/3.jpg');
   min-height: 60vh;
   background-attachment: fixed;
   background-position: center;
@@ -486,7 +480,6 @@ footer {
   text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
-/* Vídeo Background */
 .video-section {
   position: relative;
   min-height: 70vh;
@@ -508,7 +501,7 @@ footer {
   z-index: -1;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  opacity: 0.4; /* Escurece o vídeo para ler o texto em cima */
+  opacity: 0.4;
 }
 
 .video-overlay {
@@ -530,9 +523,8 @@ footer {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
-/* Secções de Informação intercaladas (Overrides de reset global para esta página) */
 .info-section {
-  min-height: auto !important; /* Sobrescreve o min-height de 100vh global */
+  min-height: auto !important;
   padding: 80px 10% !important;
   background-color: #101722 !important;
   text-align: center;
