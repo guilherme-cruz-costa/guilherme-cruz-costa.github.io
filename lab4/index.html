@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Artilhada - Lab 7</title>
+    <!-- Ligação ao ficheiro CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Lab4, A Minha Página Artilhada</h1>
+      <button>
+        <a href="/index.html">Home</a>
+      </button>
+    </header>
+
+    <main>
+      <section id="seccao-contador">
+        <h2>Contador</h2>
+        <p>O contador está em: <span id="mostrador-contador">0</span></p>
+        <button onclick="aumentarContador()">Clica para Aumentar</button>
+        <button ondblclick="reiniciarContador()">
+          Duplo Clique para Reiniciar
+        </button>
+      </section>
+
+      <!-- Secção 2: Imagem (Eventos mouseover e mouseout) -->
+      <section id="seccao-imagem">
+        <h2>Interação com Imagem</h2>
+        <p>Passa o rato por cima da imagem.</p>
+        <!-- Certifica-te que tens uma imagem chamada fotografia.png na pasta images/ -->
+        <img
+          id="minha-imagem"
+          src="images/fotografia.jpg"
+          alt="Fotografia de teste"
+          width="300"
+          onmouseover="destacarImagem()"
+          onmouseout="normalizarImagem()"
+        />
+      </section>
+
+      <!-- Secção 3: Movimento (Evento mousemove) -->
+      <section id="seccao-movimento" onmousemove="mudarCorFundo(event)">
+        <h2>Área de Movimento</h2>
+        <p id="texto-coordenadas">
+          Move o rato aqui dentro para veres a magia acontecer!
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; DIW | Guilherme Costa</p>
+    </footer>
+
+    <!-- Importação do ficheiro JavaScript no fim do body -->
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
