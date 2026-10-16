@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <section>
+      <a>1. Passa por aqui!</a>
+    </section>
+
+    <section>
+      <a>2. Pinta-me!</a>
+      <a class="button">Red</a>
+      <a class="button">Green</a>
+      <a class="button">Blue</a>
+    </section>
+
+    <section>
+      <a>3. Experimenta escrever... </a>
+      <input type="text" />
+    </section>
+
+    <section>
+      <a>4. Escolha uma cor: </a>
+      <select>
+        <option value="white">Branco</option>
+        <option value="black">Preto</option>
+        <option value="blue">Azul</option>
+        <option value="yellow">Amarelo</option>
+        <option value="red">Vermelho</option>
+        <option value="green">Verde</option>
+      </select>
+    </section>
+
+    <section>
+      <a>5. </a>
+      <a class="button">Conta!</a>
+      <a>0</a>
+    </section>
+
+    <section>
+      <a>6. </a>
+      <input type="text" />
+      <input type="number" />
+      <a class="button">Submit</a>
+      <a></a>
+    </section>
+
+    <section>
+      <a>7. Automatic Counter: </a>
+      <a>0</a>
+    </section>
+  </body>
+</html>
+
+<script>
+  const todasAsSections = document.querySelectorAll("section");
+
+  // ex 1
+  const primeiroSection = todasAsSections[0];
+  const primeiroA = primeiroSection.firstElementChild;
+
+  primeiroA.addEventListener("mouseover", function () {
+    primeiroA.textContent = "1. Obrigado por passares!";
+  });
+
+  primeiroA.addEventListener("mouseout", function () {
+    primeiroA.textContent = "1. Passa por aqui!";
+  });
+  //
+
+  // ex 2
+  const segundaSection = todasAsSections[1];
+  const textoAAlterar = segundaSection.firstElementChild;
+  const botaoRed = segundaSection.children[1];
+  const botaoGreen = segundaSection.children[2];
+  const botaoBlue = segundaSection.children[3];
+
+  function mudaDeCor(corEscolhida) {
+    textoAAlterar.style.color = corEscolhida;
+  }
+
+  botaoRed.addEventListener("click", function () {
+    mudaDeCor("red");
+  });
+
+  botaoBlue.addEventListener("click", function () {
+    mudaDeCor("blue");
+  });
+
+  botaoGreen.addEventListener("click", function () {
+    mudaDeCor("green");
+  });
+  //
+
+  // ex 3
+  const terceiraSection = todasAsSections[2];
+  const caixaTexto = terceiraSection.children[1];
+  const cores = ["salmon", "pink", "red", "blue", "yellow", "green"];
+  let count = -1;
+
+  function mudaOBackground(cor) {
+    caixaTexto.style.background = cor;
+  }
+
+  caixaTexto.addEventListener("input", function () {
+    count++;
+
+    if (count == 6) {
+      count = 0;
+    }
+
+    mudaOBackground(cores[count]);
+  });
+
+  //
+
+  // ex 4
+  const quartaSection = todasAsSections[3];
+  const corSelecionada = quartaSection.children[1];
+  const todoBackgroun = document.body;
+
+  function mudaOBackgroundTodo(cor) {
+    todoBackgroun.style.background = cor;
+  }
+
+  corSelecionada.addEventListener("change", function () {
+    mudaOBackgroundTodo(corSelecionada.value);
+  });
+  //
+
+  // ex 5
+
+  let count2 = 0;
+  const quintaSection = todasAsSections[4];
+  const botaoConta = quintaSection.children[1];
+  const contagem = quintaSection.children[2];
+
+  botaoConta.addEventListener("click", function () {
+    count++;
+    contagem.textContent = count;
+  });
+
+  //
+
+  // ex 6
+  const sextaSection = todasAsSections[5];
+  const caixaNome = sextaSection.children[1];
+  const caixaIdade = sextaSection.children[2];
+  const botaoSubmit = sextaSection.children[3];
+  const caixaResposta = sextaSection.children[4];
+
+  botaoSubmit.addEventListener("click", function () {
+    const nome = caixaNome.value;
+    const idade = caixaIdade.value;
+
+    caixaResposta.textContent = "Olá, o " + nome + " tem " + idade + "!";
+  });
+
+  //
+
+  // ex 7
+  const setimoSection = todasAsSections[6];
+  const counter2 = setimoSection.children[1];
+  let count3 = 0;
+
+  setInterval(() => {
+    count3++;
+    counter2.textContent = count3;
+  }, 1000);
+
+  //
+</script>
