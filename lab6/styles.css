@@ -18,10 +18,11 @@ header {
     background: rgba(28, 54, 89, 0.72);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    display: flex;
+    display: flex; /* Empilha os elementos na vertical */
     justify-content: space-around;
-    padding: 20px;
     align-items: center;
+     /* Espaço entre o título e o botão */
+    padding: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -29,13 +30,28 @@ header h1 {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: -0.015em;
+    margin: 0;
 }
 
-header p {
+/* Estilo específico do botão Home */
+.btn-home {
+    display: inline-block;
+    padding: 8px 24px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 980px;
+    font-weight: 600;
     font-size: 14px;
-    color: #e2e8f0;
-    margin-top: 4px;
+    transition: all 0.2s ease;
 }
+
+.btn-home:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
 main {
     padding: 40px 20px;
     display: flex;
