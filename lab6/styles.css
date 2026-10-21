@@ -2,33 +2,183 @@
 
 * {
     font-family: '-apple-system', 'BlinkMacSystemFont', 'Inter', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
+body {
+    background-color: #101722;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 10vh;
+}
+
+header {
+    background: rgba(28, 54, 89, 0.72);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
 }
 
 main {
-    background-color: skyblue;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-main section ul {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-main section {
-    border: 1px solid grey;
-    padding: 10px;
-    margin: 10px;
-}
-
-main section {
-    background-color: aliceblue;
-}
-
-main section:nth-child(2) form {
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    min-height: 80vh;
+}
+
+section {
+    background-color: #2c5282;
+    color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+section h2 {
+    font-size: 22px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+section h3 {
+    margin-top: 24px;
+    font-size: 16px;
+    color: #e2e8f0;
+}
+
+section h3 span {
+    font-weight: 700;
+    font-size: 20px;
+    color: #f48fb1;
+}
+
+/* Estrutura das Listas de Cromos */
+section ul {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+/* Estilo individual de cada Cromo (li) */
+section ul li {
+    background-color: #101722;
+    padding: 16px 20px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #5eb0e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+section ul li:hover {
+    transform: translateY(-3px);
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Caixa de Input */
+input[type="number"] {
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #101722;
+    color: #ffffff;
+    font-size: 16px;
+    width: 100%;
+    max-width: 250px;
+    outline: none;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+input[type="number"]:focus {
+    border-color: #5eb0e5;
+}
+
+/* Botões Principais */
+input[type="submit"] {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: #5eb0e5;
+    color: #101722;
+    border: none;
+    border-radius: 980px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+    background-color: #f48fb1;
+    color: #ffffff;
+}
+
+/* Botão de Eliminar dentro do Cromo */
+.btn-eliminar {
+    padding: 6px 14px;
+    background-color: rgba(244, 143, 177, 0.15);
+    color: #f48fb1;
+    border: 1px solid rgba(244, 143, 177, 0.3);
+    border-radius: 980px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #f48fb1;
+    color: #101722;
+}
+
+/* Footer Fixo */
+footer {
+    height: 10vh;
+    background: #080c12;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
 }
