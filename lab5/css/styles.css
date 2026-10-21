@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
-    /* Fontes semelhantes ao ecossistema Apple */
     font-family: '-apple-system', 'BlinkMacSystemFont', 'Inter', sans-serif;
     box-sizing: border-box;
     padding: 0;
@@ -9,15 +8,12 @@
 }
 
 body {
-    /* Fundo escuro e texto branco combinando com o projeto principal */
     background-color: #101722;
     color: #ffffff;
     text-align: center;
-    /* Espaço em baixo para o footer fixo não tapar conteúdo */
     padding-bottom: 10vh;
 }
 
-/* Header com efeito de vidro opaco comum na Apple */
 header {
     background: rgba(28, 54, 89, 0.72);
     backdrop-filter: saturate(180%) blur(20px);
@@ -27,12 +23,6 @@ header {
     padding: 20px;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-header button a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
 }
 
 header h1 {
@@ -56,16 +46,17 @@ main {
     min-height: 80vh;
 }
 
-/* As secções funcionam como os blocos azuis do teu CSS (os articles) */
 section {
-    background-color: #2c5282; /* Azul do contentor central */
+    background-color: #2c5282;
     color: #ffffff;
     width: 100%;
     max-width: 600px;
     padding: 40px 30px;
-    border-radius: 18px; /* Arredondamento igual aos teus articles */
-    text-align: center;
+    margin: 0 auto 30px;
+    margin-top: 30px;
+    border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    text-align: center;
 }
 
 section h2 {
@@ -75,83 +66,51 @@ section h2 {
     letter-spacing: -0.01em;
 }
 
-section p {
-    color: #e2e8f0;
-    margin-bottom: 24px;
-    font-size: 16px;
-}
-
-/* Destaque para o número do contador */
 #mostrador-contador {
     font-weight: 700;
-    font-size: 20px;
-    color: #f48fb1; /* Rosa da tua imagem de inspiração */
+    font-size: 24px;
+    color: #f48fb1;
+    margin: 15px 0;
+    display: block;
 }
 
-.button {
+button, .button {
     display: inline-block;
     padding: 12px 24px;
-    margin: 5px;
-    background-color: #5eb0e5; /* Azul claro dos teus links */
-    color: #101722; /* Texto escuro para contrastar bem no botão claro */
+    margin: 8px 4px;
+    background-color: #5eb0e5;
+    color: #101722;
     border: none;
-    border-radius: 980px; /* Arredondado estilo pílula */
+    border-radius: 980px;
     font-weight: 600;
     font-size: 15px;
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.button:hover {
-    background-color: #f48fb1; /* Muda para o rosa característico ao passar o rato */
+button:hover, .button:hover {
+    background-color: #f48fb1;
     color: #ffffff;
+    transform: scale(1.02);
 }
 
-section:nth-child(2) a:nth-child(1) {
-    background: white;
-    color: black;
-    padding: 5px;
-    border-radius: 3px;
-}
-
-/* Botões arredondados estilo pílula */
-button {
-    display: inline-block;
-    padding: 12px 24px;
-    margin: 5px;
-    background-color: #5eb0e5; /* Azul claro dos teus links */
-    color: #101722; /* Texto escuro para contrastar bem no botão claro */
-    border: none;
-    border-radius: 980px; /* Arredondado estilo pílula */
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
-}
-
-button:hover {
-    background-color: #f48fb1; /* Muda para o rosa característico ao passar o rato */
-    color: #ffffff;
-}
-
-/* Imagem mantendo o tamanho, mas com bordas mais suaves */
 #minha-imagem {
     width: 150px;
     border-radius: 18px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    margin-top: 15px;
 }
 
-/* Área de movimento preparada para mudar de cor */
 #seccao-movimento {
     min-height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 14px;
     transition: background-color 0.1s ease;
 }
 
-/* Footer escuro combinando com o CSS original */
 footer {
     height: 10vh;
     background: #080c12;
